@@ -4,9 +4,6 @@ Garlic = float("NaN")
 Zero = 0
 Empty = ''
 Fake = False
-# my_var: list = None
-# print(my_var)
-# print(type(my_var))
 NULL_not_found(Nothing)
 NULL_not_found(Garlic)
 NULL_not_found(Zero)
