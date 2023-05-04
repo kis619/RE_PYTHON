@@ -1,18 +1,19 @@
-import builtins
 def all_thing_is_obj(object: any) -> int:
+    object_type = object.__class__ #or type(object)
+    types = {
+        str: "String",
+        list: "List",
+        set: "Set",
+        dict: "Dict",
+        tuple: "Tuple"
+    }
+    
+    if (object_type == str):
+        print(f"{object} is in the kitchen: {object_type}")
+    elif not types.get(object_type):
+        print("Type not found")
+    else:
+        print(f"{types[object_type]} : {object_type}")
 
-    match type(object):
-        case builtins.list:
-            print("list")
-        case builtins.tuple:
-            print("tuple")
-        case builtins.dict:
-            print("dict")
-        case builtins.set:
-            print("set")
-        case builtins.str:
-            print("string")
-        case _:
-            print("did not match any type")
     return(42)
 
