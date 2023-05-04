@@ -2,8 +2,13 @@ from sys import argv, exit
 
 # the script takes an integer and prints if it is odd or even
 
-# check if script receive one argument
-if (len(argv) != 2):
+# check if script receives more than 1 argument
+if (len(argv) > 2):
+    print("AssertionError: more than one argument are provided")
+    exit()
+    
+# check if script received a argument
+if (len(argv) < 2):
     print("AssertionError: more than one argument are provided")
     exit()
 
