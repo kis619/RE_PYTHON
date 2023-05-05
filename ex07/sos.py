@@ -47,7 +47,7 @@ def alnum_to_morse(text: str) -> str:
         text (string): text to convert to morse
 
     Returns:
-        text (string): text converted to morse with spaces between each character
+        text (string): text converted to morse with spaces between each char
     """
     return " ".join([NESTED_MORSE.get(ch.upper()) for ch in text])
 

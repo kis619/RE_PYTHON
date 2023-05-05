@@ -15,7 +15,7 @@ def main():
     # quit if second arg cannot be an integer
     try:
         min_len = int(argv[argc - 1]) + 1
-    except:
+    except (...):
         print("AssertionError: the arguments are bad")
         exit()
 

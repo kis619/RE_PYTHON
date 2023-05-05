@@ -6,7 +6,7 @@ from sys import argv, exit
 if (len(argv) > 2):
     print("AssertionError: more than one argument are provided")
     exit()
-    
+
 # check if script received a argument
 if (len(argv) < 2):
     print("AssertionError: more than one argument are provided")
@@ -15,7 +15,7 @@ if (len(argv) < 2):
 # check if argument is an integer
 try:
     num = int(argv[1])
-except:
+except (ValueError, AssertionError):
     print("AssertionError: argument is not an integer")
     exit()
 
