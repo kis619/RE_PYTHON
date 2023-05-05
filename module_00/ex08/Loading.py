@@ -1,11 +1,22 @@
+from time import sleep
+from tqdm import tqdm
+
 import os
 
 
-def print_progress(iterable, idx, elements_count, bar_size, progress_step):
+def main():
+    for elem in ft_tqdm(range(333)):
+        sleep(0.005)
+    print()
+    for elem in tqdm(range(333)):
+        sleep(0.005)
+    print()
+
+
+def print_progress(idx, elements_count, bar_size, progress_step):
     """Prints the progress of an iterable in the terminal
 
     Args:
-        iterable: iterable to print progress of
         idx: current index of iterable
         elements_count: total number of elements in iterable
         bar_size: len of the bar
@@ -56,5 +67,9 @@ def ft_tqdm(iterable):
         progress_step = int(idx * progress_factor)
 
         # print progress
-        print_progress(iterable, idx + 1, elements_count,
+        print_progress(idx + 1, elements_count,
                        bar_size, progress_step)
+
+
+if __name__ == "__main__":
+    main()
