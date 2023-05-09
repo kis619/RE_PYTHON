@@ -1,5 +1,8 @@
+import sys
+sys.path.append("..")
+
 import unittest
-from give_bmi import give_bmi, apply_limit
+from ex00.give_bmi import give_bmi, apply_limit
 import numpy as np
 
 
