@@ -27,22 +27,3 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     except TypeError:
         print("BMI must be a list of int or float")
         exit(5)
-
-
-def main():
-    ...
-
-
-if __name__ == "__main__":
-
-    height = np.array([0, 0])
-    weight = np.array([165.1, 38])
-    print(weight / height)
-    # bmi = give_bmi(height, weight)
-    # print(bmi, type(bmi))
-    # print(apply_limit(bmi, 26))
-
-    height = np.array([0, 0])
-    weight = np.array([165, 38])
-    result = np.divide(weight, height)
-    print(result)  # Output: [0 0]
