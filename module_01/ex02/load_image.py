@@ -3,6 +3,18 @@ import numpy as np
 
 
 def ft_load(path: str) -> np.ndarray | None:
+    """
+    Loads an image from a given path prints its dimension
+    and returns an ndarray
+
+    args:
+        path: str - path to the image
+
+    Returns:
+        ndarray: the image as an ndarray
+        None: if there is an error
+    """
+    
     if not isinstance(path, str):
         print("Path must be a string")
         return None
