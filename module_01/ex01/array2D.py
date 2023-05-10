@@ -20,11 +20,11 @@ def slice_me(family: list, start: int, end: int) -> list:
         list: the sliced list
     """
 
-    if isinstance(family, list) == False:
+    if isinstance(family, list) is False:
         print("family argument is not a list")
         raise TypeError("family argument is not a list")
 
-    if (isinstance(start, int) == False) or (isinstance(end, int) == False):
+    if (isinstance(start, int) is False) or (isinstance(end, int) is False):
         print("start and end arguments must be integers")
         raise TypeError("start and end arguments must be integers")
 
@@ -37,5 +37,3 @@ def slice_me(family: list, start: int, end: int) -> list:
     sliced = family[start:end]
     print(f"My new shape is: {np.shape(sliced)}")
     return sliced
-
-# slice_me([[1], [2, 2]], 0, 1)
