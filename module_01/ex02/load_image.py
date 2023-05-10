@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, UnidentifiedImageError
 import numpy as np
 
 
@@ -11,6 +11,9 @@ def ft_load(path: str) -> np.ndarray | None:
         img = Image.open(path)
     except FileNotFoundError:
         print(f"File at path {path} not found")
+        return None
+    except UnidentifiedImageError:
+        print("Unidentified image")
         return None
 
     format = img.format
@@ -27,9 +30,3 @@ def ft_load(path: str) -> np.ndarray | None:
     img.close()
     print("The shape of the image is:", pixel_array.shape)
     return pixel_array
-
-
-print(ft_load(2))
-print(ft_load("noob-level.png"))
-print(ft_load("landscape.jpg"))
-

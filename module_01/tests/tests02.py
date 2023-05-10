@@ -20,9 +20,14 @@ class TestFtLoad(TestCase):
         self.assertEqual(mock_stdout.getvalue(), "File at path not_found.png not found\n")
 
     @patch('sys.stdout', new_callable=StringIO)
-    def test_ft_load_unsupported_file_format(self, mock_stdout):
+    def test_ft_load_unsupported_image_format(self, mock_stdout):
         self.assertEqual(ft_load("module_01/normal-level.webp"), None)
         self.assertEqual(mock_stdout.getvalue(), "Image format: WEBP\nUnsupported file format\n")
+    
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_ft_load_unsupported_file_format(self, mock_stdout):
+        self.assertEqual(ft_load("module_01/tests/tests00.py"), None)
+        self.assertEqual(mock_stdout.getvalue(), "Unidentified image\n")
     
     @patch('sys.stdout', new_callable=StringIO)
     def test_ft_load_argument_not_string(self, mock_stdout):
