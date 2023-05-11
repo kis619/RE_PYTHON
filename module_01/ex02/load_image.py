@@ -14,7 +14,7 @@ def ft_load(path: str) -> np.ndarray | None:
         ndarray: the image as an ndarray
         None: if there is an error
     """
-    
+
     if not isinstance(path, str):
         print("Path must be a string")
         return None

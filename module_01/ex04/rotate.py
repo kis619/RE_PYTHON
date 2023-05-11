@@ -26,7 +26,7 @@ def rotate_image(image_array):
     for i in range(cols):
         for j in range(rows):
             new_row.append(image_array[j][cols - i - 1])
-        new_arr.append(new_row.copy()) 
+        new_arr.append(new_row.copy())
         new_row.clear()
     new_arr = np.array(new_arr)
     print(new_arr.shape)
@@ -37,7 +37,7 @@ def rotate_image(image_array):
 def main():
     """
     crops, paints gray and rotates an image
-    
+
     """
     img = load_image("animal.jpeg")
     img = crop_image(img, 100, 100, 500)

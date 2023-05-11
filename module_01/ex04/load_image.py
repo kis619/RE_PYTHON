@@ -60,9 +60,10 @@ def crop_image(img_array, x, y, size):
         return None
 
     if x + size >= img_array.shape[0] or y + size >= img_array.shape[1]:
-        print("crop_image: the starting point + size should not exceed the image")
+        print("crop_image: the starting point",
+              "+ size should not exceed the image")
         return None
-    
+
     img_array = img_array[x:, y:, :1]
     print("The new image shape is:", img_array.shape)
     print(img_array)
