@@ -1,5 +1,4 @@
 import sys
-import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from load_csv import load_csv
@@ -34,7 +33,8 @@ def user_selects_country(city_and_one_or_more_countries):
         except EOFError:
             print("Invalid choice")
             sys.exit(69)
-        if country_index > 0 and country_index <= len(city_and_one_or_more_countries):
+        if (country_index > 0 and
+                country_index <= len(city_and_one_or_more_countries)):
             return city_and_one_or_more_countries[country_index - 1]
         print("Invalid choice")
 
@@ -62,10 +62,8 @@ def get_country(city):
     return country
 
 
-def aff_life(city):
-    country = get_country(city)
-    if country is None:
-        return None
+def create_plot(country):
+
     ds = load_csv("life_expectancy_years.csv")
     if ds is None:
         print("Error loading file")
@@ -77,14 +75,14 @@ def aff_life(city):
     plt.xlabel("Years")
     plt.ylabel("Population")
     plt.plot(years, population)
-    plt.show()
-    print(years)
-    # print(ds)
-    # print(f"Country: {country}")
 
 
 def main():
-    aff_life("Wolfsburg")
+    country = get_country("Wolfsburg")
+    if country is None:
+        return None
+    create_plot(country)
+    plt.show()
 
 
 if __name__ == "__main__":
