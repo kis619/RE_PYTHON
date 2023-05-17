@@ -23,5 +23,9 @@ class calculator:
 
     def __truediv__(self, other) -> None:
         """Division of a number to each element of the list"""
-        self.data = [x / other for x in self.data]
-        print(self.data)
+        try:
+            self.data = [x / other for x in self.data]
+        except ZeroDivisionError:
+            print("ZeroDivisionError: division by zero")
+        else:
+            print(self.data)
