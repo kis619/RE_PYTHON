@@ -24,7 +24,7 @@ def main():
     # prompt the user for input if they did not provide a string
     while (input_text == ""):
         try:
-            input_text = input("What is the text to count? ")
+            input_text = input("What is the text to count?\n")
         except EOFError:
             exit()
 
