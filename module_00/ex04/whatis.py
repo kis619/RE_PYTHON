@@ -4,12 +4,12 @@ from sys import argv, exit
 
 # check if script receives more than 1 argument
 if (len(argv) > 2):
-    print("AssertionError: more than one argument are provided")
+    print("AssertionError: more than one argument is provided")
     exit()
 
 # check if script received a argument
 if (len(argv) < 2):
-    print("AssertionError: more than one argument are provided")
+    # print("AssertionError: more than one argument is provided")
     exit()
 
 # check if argument is an integer
