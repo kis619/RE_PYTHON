@@ -20,7 +20,6 @@ def load_image(path):
         print("Path must be a string")
         return None
 
-    plt.title("Cute Racoon")
     plt.xlabel("width")
     plt.ylabel("height")
 

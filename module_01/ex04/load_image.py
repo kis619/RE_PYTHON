@@ -45,6 +45,7 @@ def crop_image(img_array, x, y, size):
         img_array: ndarray - image as an ndarray
         x: int - x coordinate
         y: int - y coordinate
+        size: int - size of the crop
     """
 
     if not isinstance(x, int) or not isinstance(y, int):
@@ -64,7 +65,7 @@ def crop_image(img_array, x, y, size):
               "+ size should not exceed the image")
         return None
 
-    img_array = img_array[x:, y:, :1]
+    img_array = img_array[x:x + size, y:y + size, :1]
     print("The new image shape is:", img_array.shape)
     print(img_array)
 
